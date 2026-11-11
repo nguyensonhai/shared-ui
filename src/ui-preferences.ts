@@ -1,4 +1,4 @@
-// UI preferences (text size, font, density, corner radius, reduced motion),
+// UI preferences (text size, font, density, corner radius),
 // shared by Solavi and Montide. Persisted per browser in localStorage and
 // applied as CSS variables on <html>: each app makes its own store with
 // `createUiPreferencesStore("solavi")`, then applies `preferenceVars` in a
@@ -13,7 +13,6 @@ export type UiPreferences = {
   fontScale: number
   density: Density
   radiusScale: RadiusScale
-  reduceMotion: boolean
   fontFamily: FontFamilyId
 }
 
@@ -55,7 +54,6 @@ export const defaultUiPreferences: UiPreferences = {
   fontScale: 1,
   density: "auto",
   radiusScale: "default",
-  reduceMotion: false,
   fontFamily: "manrope",
 }
 
@@ -92,7 +90,6 @@ function sanitize(value: unknown): UiPreferences {
     radiusScale: radiusScales.includes(v.radiusScale as RadiusScale)
       ? (v.radiusScale as RadiusScale)
       : defaultUiPreferences.radiusScale,
-    reduceMotion: v.reduceMotion === true,
     fontFamily: fontOptions.some((f) => f.id === v.fontFamily)
       ? (v.fontFamily as FontFamilyId)
       : defaultUiPreferences.fontFamily,
@@ -182,7 +179,6 @@ if(typeof p.fontScale==="number")s.setProperty("--ui-font-scale",String(p.fontSc
 s.setProperty("--ui-density-scale",d==="compact"?"0.85":d==="comfortable"?"1.15":"1");
 if(p.radiusScale)s.setProperty("--ui-radius-scale",p.radiusScale==="sharp"?"0.5":p.radiusScale==="rounded"?"1.5":"1");
 if(fonts[p.fontFamily])s.setProperty("--ui-font-family",fonts[p.fontFamily]);
-if(p.reduceMotion===true)document.documentElement.setAttribute("data-reduce-motion","true");
 }catch(e){}})()`
 
   return { get, set, subscribe, script }

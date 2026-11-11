@@ -1,14 +1,11 @@
 // Motion helpers shared by Solavi and Montide. Everything here degrades to
 // "no animation" when the browser lacks the API or the user asked for less
-// motion (OS setting or the in-app "Reduce motion" preference).
+// motion (the OS "reduce motion" setting).
 
 /** True when animations should be skipped. Browser only. */
 export function prefersReducedMotion(): boolean {
   if (typeof window === "undefined") return true
-  return (
-    document.documentElement.getAttribute("data-reduce-motion") === "true" ||
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  )
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches
 }
 
 type ViewTransitionLike = { ready: Promise<void>; finished: Promise<void> }
