@@ -1,0 +1,49 @@
+{
+  "name": "@nguyensonhai/shared-ui",
+  "version": "0.1.0",
+  "description": "UI pieces shared by Solavi and Montide (Next.js + MUI): scramble text, inline script, emotion registry, motion helpers, UI preferences store.",
+  "license": "UNLICENSED",
+  "private": false,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyensonhai/shared-ui.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "src"
+  ],
+  "sideEffects": false,
+  "exports": {
+    "./motion": "./src/motion.ts",
+    "./scramble-text": "./src/scramble-text.tsx",
+    "./inline-script": "./src/inline-script.tsx",
+    "./emotion-registry": "./src/emotion-registry.tsx",
+    "./ui-preferences": "./src/ui-preferences.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@emotion/cache": ">=11",
+    "@emotion/react": ">=11",
+    "@mui/material": ">=7",
+    "next": ">=15",
+    "react": ">=19"
+  },
+  "devDependencies": {
+    "@emotion/cache": "11.14.0",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@mui/material": "9.5.0",
+    "@types/node": "20.19.43",
+    "@types/react": "19.3.0",
+    "next": "16.4.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "pnpm@10.30.2"
+}
