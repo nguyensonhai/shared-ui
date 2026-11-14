@@ -1,6 +1,6 @@
 # @nguyensonhai/shared-ui
 
-UI pieces shared by Solavi and Montide (Next.js App Router + MUI + Emotion).
+UI pieces shared by Solavi and Raykit (Next.js App Router + MUI + Emotion).
 Shipped as TypeScript source: each app lists it in `transpilePackages`.
 
 | Import                                          | What                                                          |

@@ -1,5 +1,5 @@
 // The slice of the apps' design tokens that the shared components use.
-// Same values as `src/theme/tokens.ts` in Montide and Solavi.
+// Same values as `src/theme/tokens.ts` in Raykit and Solavi.
 
 export const FONT_SIZE = {
   CAPTION_LG: "0.6875rem",

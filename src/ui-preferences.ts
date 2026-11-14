@@ -1,5 +1,5 @@
 // UI preferences (text size, font, density, corner radius),
-// shared by Solavi and Montide. Persisted per browser in localStorage and
+// shared by Solavi and Raykit. Persisted per browser in localStorage and
 // applied as CSS variables on <html>: each app makes its own store with
 // `createUiPreferencesStore("solavi")`, then applies `preferenceVars` in a
 // provider and `store.script` before first paint.

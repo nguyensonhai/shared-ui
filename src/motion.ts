@@ -1,4 +1,4 @@
-// Motion helpers shared by Solavi and Montide. Everything here degrades to
+// Motion helpers shared by Solavi and Raykit. Everything here degrades to
 // "no animation" when the browser lacks the API or the user asked for less
 // motion (the OS "reduce motion" setting).
 

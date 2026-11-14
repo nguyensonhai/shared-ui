@@ -1,7 +1,7 @@
 {
   "name": "@nguyensonhai/shared-ui",
   "version": "0.3.0",
-  "description": "UI pieces shared by Solavi and Montide (Next.js + MUI): modal, UI preferences (store, provider, dialog), slide-to-reset, scramble text, inline script, emotion registry, motion and viewport helpers.",
+  "description": "UI pieces shared by Solavi and Raykit (Next.js + MUI): modal, UI preferences (store, provider, dialog), slide-to-reset, scramble text, inline script, emotion registry, motion and viewport helpers.",
   "license": "UNLICENSED",
   "private": false,
   "type": "module",
