@@ -11,6 +11,8 @@ export const FONT_SIZE = {
 
 export const RADIUS = { SM: 8, MD: 12 } as const
 
+export const SHADOWS = { LG: "0 12px 24px rgba(0, 0, 0, 0.12)" } as const
+
 /** Radius that follows the corner-radius preference. */
 export const r = (px: number): string =>
   `calc(${px}px * var(--ui-radius-scale, 1))`

@@ -13,6 +13,9 @@ Shipped as TypeScript source: each app lists it in `transpilePackages`.
 | `@nguyensonhai/shared-ui/viewport`              | `useViewportWidth`                                            |
 | `@nguyensonhai/shared-ui/motion`                | `prefersReducedMotion`, `runViewTransition`                   |
 | `@nguyensonhai/shared-ui/scramble-text`         | `ScrambleText`, `ScramblePlaceholder` (katakana decode)       |
+| `@nguyensonhai/shared-ui/family-card`           | `MontideCredit` (© year Montide + card), `FamilyCard`, `CardLink`, `MontideArt` |
+| `@nguyensonhai/shared-ui/egg-toast`             | `EggToast` (cracking egg; the app's mascot as `hatchling`)    |
+| `@nguyensonhai/shared-ui/dialog-state`          | `createDialogState(event)`: open a dialog from anywhere       |
 | `@nguyensonhai/shared-ui/site-header`           | `SiteHeader` (transparent sticky header), `HeaderTools`, `ThemeToggle`, `LanguageMenu`, `useThemeSwitch` |
 | `@nguyensonhai/shared-ui/inline-script`         | `InlineScript`: run a script before first paint               |
 | `@nguyensonhai/shared-ui/emotion-registry`      | `EmotionRegistry` for MUI in the App Router                   |
