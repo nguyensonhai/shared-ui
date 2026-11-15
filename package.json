@@ -1,7 +1,7 @@
 {
   "name": "@nguyensonhai/shared-ui",
-  "version": "0.3.0",
-  "description": "UI pieces shared by Solavi and Raykit (Next.js + MUI): modal, UI preferences (store, provider, dialog), slide-to-reset, scramble text, inline script, emotion registry, motion and viewport helpers.",
+  "version": "0.4.0",
+  "description": "UI pieces shared by Solavi and Raykit (Next.js + MUI): modal, UI preferences (store, provider, dialog), slide-to-reset, scramble text, inline script, emotion registry, motion and viewport helpers, and the site header (theme switch, language menu, tools).",
   "license": "UNLICENSED",
   "private": false,
   "type": "module",
@@ -22,6 +22,7 @@
     "./inline-script": "./src/inline-script.tsx",
     "./motion": "./src/motion.ts",
     "./scramble-text": "./src/scramble-text.tsx",
+    "./site-header": "./src/site-header.tsx",
     "./slide-to-reset": "./src/slide-to-reset.tsx",
     "./ui-preferences": "./src/ui-preferences.ts",
     "./ui-preferences-dialog": "./src/ui-preferences-dialog.tsx",
@@ -37,7 +38,8 @@
     "@mui/material": ">=7",
     "lucide-react": ">=1",
     "next": ">=15",
-    "react": ">=19"
+    "react": ">=19",
+    "react-dom": ">=19"
   },
   "devDependencies": {
     "@emotion/cache": "11.14.0",
@@ -46,6 +48,7 @@
     "@mui/material": "9.5.0",
     "@types/node": "20.19.43",
     "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "lucide-react": "1.70.0",
     "next": "16.4.5",
     "react": "19.3.1",

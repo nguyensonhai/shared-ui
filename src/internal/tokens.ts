@@ -15,6 +15,10 @@ export const RADIUS = { SM: 8, MD: 12 } as const
 export const r = (px: number): string =>
   `calc(${px}px * var(--ui-radius-scale, 1))`
 
+/** Size that follows the density preference. */
+export const d = (px: number): string =>
+  `calc(${px}px * var(--ui-density-scale, 1))`
+
 /** `{name}` placeholders, as the apps' i18n `format`. */
 export const fill = (message: string, values: Record<string, string>) =>
   message.replace(/\{(\w+)\}/g, (m, key: string) =>
