@@ -222,7 +222,7 @@ export function CardLink({
 }
 
 /**
- * The footer's credit line: "© {year} Montide", the name a link to
+ * The footer's credit line: "© {year} Montide Crew", the name a link to
  * montide.app that shows the Montide card on hover or focus.
  */
 export function MontideCredit({
@@ -241,7 +241,7 @@ export function MontideCredit({
         href={MONTIDE_URL}
         card={<FamilyCard strings={strings} accent={accent} />}
       >
-        Montide
+        Montide Crew
       </CardLink>
     </>
   )
