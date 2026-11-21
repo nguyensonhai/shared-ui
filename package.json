@@ -1,6 +1,6 @@
 {
   "name": "@nguyensonhai/shared-ui",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "UI pieces shared by Solavi and Raykit (Next.js + MUI): modal, UI preferences (store, provider, dialog), slide-to-reset, scramble text, inline script, emotion registry, motion and viewport helpers, the site header (theme switch, language menu, tools), the Montide footer card, the egg toast and dialog open state.",
   "license": "UNLICENSED",
   "private": false,

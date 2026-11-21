@@ -58,12 +58,33 @@ function glyphFrames(text: string, count: number): string[] {
 const FRAMES = 8
 
 /**
+ * Where the decode overlay sits on the real text. Katakana are wider than
+ * Latin letters, so the overlay is often wider than the text: "center"
+ * spills both ways (right for centred headings), "start" spills only to the
+ * end side, so a left-aligned heading never loses its first letters.
+ */
+export type ScrambleAlign = "center" | "start"
+
+function overlayPosition(align: ScrambleAlign) {
+  return align === "start"
+    ? { left: 0, transform: "none" }
+    : { left: "50%", transform: "translateX(-50%)" }
+}
+
+/**
  * What a `ScrambleText` looks like before the page's JavaScript runs:
  * katakana that keep flickering in place of the text (pure CSS, so it
  * moves even before hydration). Swap in the real `ScrambleText` once the
  * page is interactive; its intro decode then picks up from here.
  */
-export function ScramblePlaceholder({ text }: { text: string }) {
+export function ScramblePlaceholder({
+  text,
+  align = "center",
+}: {
+  text: string
+  /** Match the `ScrambleText` it stands in for. */
+  align?: ScrambleAlign
+}) {
   const frames = glyphFrames(text, FRAMES)
   const flicker = keyframes(
     Object.fromEntries(
@@ -93,8 +114,7 @@ export function ScramblePlaceholder({ text }: { text: string }) {
         sx={{
           position: "absolute",
           top: 0,
-          left: "50%",
-          transform: "translateX(-50%)",
+          ...overlayPosition(align),
           whiteSpace: "nowrap",
           pointerEvents: "none",
           userSelect: "none",
@@ -115,10 +135,13 @@ export function ScramblePlaceholder({ text }: { text: string }) {
 export function ScrambleText({
   text,
   replay = false,
+  align = "center",
 }: {
   text: string
   /** Decode on every mount, not only on the first one of the page load. */
   replay?: boolean
+  /** "start" for left-aligned text; see `ScrambleAlign`. */
+  align?: ScrambleAlign
 }) {
   const realRef = useRef<HTMLSpanElement>(null)
   const overlayRef = useRef<HTMLSpanElement>(null)
@@ -210,8 +233,7 @@ export function ScrambleText({
         style={{
           position: "absolute",
           top: 0,
-          left: "50%",
-          transform: "translateX(-50%)",
+          ...overlayPosition(align),
           whiteSpace: "nowrap",
           pointerEvents: "none",
           userSelect: "none",
