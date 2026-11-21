@@ -17,6 +17,7 @@ Shipped as TypeScript source: each app lists it in `transpilePackages`.
 | `@nguyensonhai/shared-ui/egg-toast`             | `EggToast` (cracking egg; the app's mascot as `hatchling`)    |
 | `@nguyensonhai/shared-ui/dialog-state`          | `createDialogState(event)`: open a dialog from anywhere       |
 | `@nguyensonhai/shared-ui/site-header`           | `SiteHeader` (transparent sticky header), `HeaderTools`, `ThemeToggle`, `LanguageMenu`, `useThemeSwitch` |
+| `@nguyensonhai/shared-ui/image-viewer`          | `createImageViewer(event)`, `ImageViewer`: full-screen screenshots (light/dark pair, steps through a set) |
 | `@nguyensonhai/shared-ui/inline-script`         | `InlineScript`: run a script before first paint               |
 | `@nguyensonhai/shared-ui/emotion-registry`      | `EmotionRegistry` for MUI in the App Router                   |
 
